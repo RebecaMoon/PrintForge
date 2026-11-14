@@ -1,0 +1,74 @@
+PRINTFORGE — DEVELOPMENT ENVIRONMENT SETUP Windows 11
+
+This document summarizes the tools installed or verified so far for
+PrintForge development.
+
+1.  Git Version: 2.52.0.windows.1 Status: Already installed and
+    verified. Purpose:
+    -   Provides version control for the project.
+    -   Tracks source-code changes and supports collaboration and
+        integration with GitHub.
+2.  Node.js Version: 26.13.1 Status: Installed and verified. Purpose:
+    -   Provides the JavaScript runtime required by the frontend
+        development tooling.
+    -   Runs Vite and other Node-based development tools.
+    -   npm is included to install and manage frontend dependencies such
+        as React, TypeScript, and Vite.
+3.  npm Version: 11.20.0 Status: Installed and verified with Node.js.
+    Purpose:
+    -   Installs, updates, and manages JavaScript and TypeScript project
+        dependencies.
+    -   Runs project scripts, including the Vite development server and
+        build commands.
+4.  Microsoft Visual Studio Build Tools Version: 18.12.0 (Visual Studio
+    Build Tools 2026; November 2026 feature update) Status: Installed.
+    Selected workload: Desktop development with C++. Selected components
+    include:
+    -   MSVC C++ x64/x86 build tools.
+    -   Windows 11 SDK, version 10.0.26100.9457.
+    -   C++ CMake tools for Windows.
+    -   Additional selected components: MSVC AddressSanitizer and vcpkg.
+        Purpose:
+    -   Provides the native C/C++ compiler and Windows development tools
+        required to compile Rust/Tauri dependencies on Windows.
+    -   The Windows SDK provides Windows headers, libraries, and build
+        tools.
+    -   CMake tools support native projects that use CMake.
+5.  Rust Version: 1.100.0 Status: Installed and verified. Purpose:
+    -   Rust is the programming language used for PrintForge’s Tauri
+        backend.
+    -   It implements application commands, native operations, and
+        access to local resources.
+6.  Cargo Version: 1.100.0 Status: Installed and verified with Rust.
+    Purpose:
+    -   Rust’s package manager and build tool.
+    -   Downloads and manages Rust dependencies and builds the Tauri
+        backend.
+7.  Rustup Version: 1.29.3 Status: Installed and verified. Purpose:
+    -   Installs and manages Rust toolchains and targets.
+    -   Keeps the Rust toolchain configurable and updatable.
+
+    Rust toolchain configuration:
+    -   Default host: x86_64-pc-windows-msvc
+    -   Active toolchain: stable-x86_64-pc-windows-msvc
+    -   Installed target: x86_64-pc-windows-msvc
+8.  Microsoft Edge WebView2 Runtime Version: Not checked. Status:
+    Already installed on the system (confirmed when the Evergreen
+    Standalone Installer reported that WebView2 Runtime was already
+    installed for the system). Purpose:
+    -   Tauri uses WebView2 to display the React frontend inside the
+        Windows desktop application.
+    -   The Evergreen Runtime is maintained separately from the
+        application and receives runtime updates.
+
+NOTES - SQLite has not been installed as a separate application.
+PrintForge will use SQLite as a local database file, accessed through
+the Rust/Tauri backend and the appropriate project dependencies. A
+database server is not required. - Visual Studio Code and its extensions
+have not yet been installed or configured as part of this setup. -
+React, Vite, and TypeScript will be added when the Tauri project is
+created with the React + TypeScript template.
+
+PrintForge technology stack: - Frontend: React + Vite + TypeScript -
+Desktop framework and backend: Tauri 2 + Rust - Local database: SQLite -
+Version control: Git + GitHub - Development platform: Windows 11
