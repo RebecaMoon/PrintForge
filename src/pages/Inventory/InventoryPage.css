@@ -1,0 +1,13 @@
+.inventory-page {
+  width: 100%;
+}
+
+.inventory-page h1 {
+  color: var(--color-text-primary);
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.inventory-page p {
+  color: var(--color-text-secondary);
+}

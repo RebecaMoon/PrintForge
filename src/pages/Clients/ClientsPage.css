@@ -1,0 +1,13 @@
+.clients-page {
+  width: 100%;
+}
+
+.clients-page h1 {
+  color: var(--color-text-primary);
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.clients-page p {
+  color: var(--color-text-secondary);
+}

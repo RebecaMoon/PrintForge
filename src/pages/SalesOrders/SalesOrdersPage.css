@@ -1,0 +1,13 @@
+.salesOrders-page {
+  width: 100%;
+}
+
+.salesOrders-page h1 {
+  color: var(--color-text-primary);
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.salesOrders-page p {
+  color: var(--color-text-secondary);
+}

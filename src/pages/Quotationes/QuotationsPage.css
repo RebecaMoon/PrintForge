@@ -1,0 +1,13 @@
+.quotations-page {
+  width: 100%;
+}
+
+.quotations-page h1 {
+  color: var(--color-text-primary);
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.quotations-page p {
+  color: var(--color-text-secondary);
+}
